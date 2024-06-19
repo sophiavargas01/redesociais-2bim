@@ -9,67 +9,67 @@ export default function TabTwoScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={
-        <Image source={require('@/assets/images/logo.png')} style={styles.headerImage} />
+        <Image source={require('@/assets/images/beatles.jpeg')} style={styles.headerImage} />
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Redes sociais</ThemedText>
+        <ThemedText type='title' style={styles.title}>Minhas redes sociais:</ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.contentContainer}>
         <ThemedView style={styles.redes}>
           <Image source={require('@/assets/images/1.png')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('https://wa.me/5518998235090')}>
-            <ThemedText>Whatsapp</ThemedText>
+            <ThemedText style={styles.text}>Whatsapp</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
           <Image source={require('@/assets/images/7.webp')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('https://www.linkedin.com/in/sophia-melo-a1770b314/')}>
-            <ThemedText>Linkedin</ThemedText>
+            <ThemedText style={styles.text}>Linkedin</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/8.webp')} style={styles.icon} />
+          <Image source={require('@/assets/images/999.png')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('mailto:melosophia329@gmail.com')}>
-            <ThemedText>Email</ThemedText>
+            <ThemedText style={styles.text}>Email</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
           <Image source={require('@/assets/images/2.png')} style={styles.icon} />
           <Pressable onPress={() => Linking.openURL('https://github.com/sophiavargas01')}>
-            <ThemedText>Github</ThemedText>
+            <ThemedText style={styles.text}>Github</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
           <Image source={require('@/assets/images/3.png')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('https://br.pinterest.com/sophiavargas093/')}>
-            <ThemedText>Pinterest</ThemedText>
+            <ThemedText style={styles.text}>Pinterest</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/4.png')} style={styles.icon} />
+          <Image source={require('@/assets/images/001.png')} style={styles.icon} />
           <Pressable onPress={() => Linking.openURL('tel:5518998235090')}>
-            <ThemedText>Telefone</ThemedText>
+            <ThemedText style={styles.text}>Telefone</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
           <Image source={require('@/assets/images/5.png')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('https://www.instagram.com/ssoidk/')}>
-            <ThemedText>Instagram</ThemedText>
+            <ThemedText style={styles.text}>Instagram</ThemedText>
           </Pressable>
         </ThemedView>
 
         <ThemedView style={styles.redes}>
-          <Image source={require('@/assets/images/6.png')} style={styles.icon} />
+          <Image source={require('@/assets/images/17.webp')} style={styles.icon} />
           <Pressable  onPress={() => Linking.openURL('https://discord.gg/.sophhia.')}>
-            <ThemedText>Discord</ThemedText>
+            <ThemedText style={styles.text}>Discord</ThemedText>
           </Pressable>
         </ThemedView>
 
@@ -86,6 +86,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     padding: 16,
   },
+  title:{
+    fontSize: 25,
+  },
   contentContainer: {
     alignItems: 'center',
     paddingHorizontal: 16,
@@ -97,14 +100,18 @@ const styles = StyleSheet.create({
     marginTop: 16,
     backgroundColor: 'white',
     borderRadius: 100,
-    padding: 10
+    padding: 10,
+    width: '80%',
+    borderColor:'purple',
+    borderWidth:'5%',
   },
   icon: {
     width: 40,
     height: 40,
     marginRight: 8,
   },
+  
   text: {
-    fontSize: 16,
+    color:'black'
   },
 });

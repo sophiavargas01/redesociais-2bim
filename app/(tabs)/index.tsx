@@ -8,16 +8,17 @@ import { ThemedView } from "@/components/ThemedView";
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
+
+      headerBackgroundColor={{ light: "#f5f9a9", dark: "#f5f9a9" }}
       headerImage={
         <Image
-          source={require("@/assets/images/logo.png")}
+          source={require("@/assets/images/beatles.jpeg")}
           style={styles.reactLogo}
         />
       }
     >
       <ThemedView style={styles.tituloContainer}>
-        <ThemedText type="title">Bem vindo ao Redes Sociais!</ThemedText>
+        <ThemedText type="title" style={styles.title}>Bem vindo ao Redes Sociais!</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.tituloContainer}>
@@ -38,6 +39,10 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">Sobre mim:</ThemedText>
       </ThemedView>
       <ThemedView style={styles.textoContainer}>
+        <Image
+          source={require("@/assets/images/eu.jpeg")}
+          style={styles.icon}
+        />
         <ThemedText>
           Me chamo Sophia Vargas e estou fazendo um aplciativo que contenha
           algumas redes socias
@@ -52,10 +57,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
+    color: 'yellow',
   },
   textoContainer: {
     gap: 8,
     marginBottom: 8,
+    alignItems:'center',
+    justifyContent:'center',
   },
   reactLogo: {
     height: 300,
@@ -63,5 +71,16 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     position: "absolute",
+  },
+  icon: {
+    width: 200,
+    height: 200,
+    marginRight: 8,
+    borderRadius:100,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  title:{
+    fontSize: 25,
   },
 });
