@@ -1,70 +1,67 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Image, StyleSheet, Platform } from "react-native";
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import { HelloWave } from "@/components/HelloWave";
+import ParallaxScrollView from "@/components/ParallaxScrollView";
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
 
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
+          source={require("@/assets/images/logo.png")}
           style={styles.reactLogo}
         />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+      }
+    >
+      <ThemedView style={styles.tituloContainer}>
+        <ThemedText type="title">Bem vindo ao Redes Sociais!</ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+      <ThemedView style={styles.tituloContainer}>
+        <ThemedText type="subtitle">Sobre o app:</ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.textoContainer}>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
           <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
+            Redes Sociais é a solução definitiva para gerenciar todas as suas redes
+            sociais em um único lugar. Com UniChat, você pode conectar e
+            sincronizar suas contas de diversas plataformas, como Facebook,
+            Twitter, Instagram, LinkedIn e muitas outras, facilitando a
+            visualização e a interação com suas redes de forma centralizada.
+          </ThemedText>
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+      <ThemedView style={styles.tituloContainer}>
+        <ThemedText type="subtitle">Sobre mim:</ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.textoContainer}>
         <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
+          Me chamo Sophia Vargas e estou fazendo um aplciativo que contenha
+          algumas redes socias
         </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+      </ThemedView> 
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  tituloContainer: {
+    flexDirection: "row",
+    alignItems: "center",
     gap: 8,
   },
-  stepContainer: {
+  textoContainer: {
     gap: 8,
     marginBottom: 8,
   },
   reactLogo: {
-    height: 178,
-    width: 290,
+    height: 300,
+    width: 550,
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    position: "absolute",
   },
 });
