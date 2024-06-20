@@ -7,13 +7,13 @@ import { ThemedView } from '@/components/ThemedView';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#CA804D', dark: '#CA804D' }}
       headerImage={
         <Image source={require('@/assets/images/beatles.jpeg')} style={styles.headerImage} />
       }
     >
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type='title' style={styles.title}>Minhas redes sociais:</ThemedText>
+        <ThemedText type='title' style={styles.title}>Acesse minhas redes sociais :)</ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.contentContainer}>
@@ -87,7 +87,8 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   title:{
-    fontSize: 25,
+    fontSize: 20,
+    textAlign: 'center'
   },
   contentContainer: {
     alignItems: 'center',
@@ -99,10 +100,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 16,
     backgroundColor: 'white',
-    borderRadius: 100,
+    borderRadius: 10,
     padding: 10,
     width: '80%',
-    borderColor:'purple',
+    borderColor:'black',
     borderWidth:'5%',
   },
   icon: {
